@@ -1,6 +1,6 @@
 # Example Flask Server
 
-This repo contains a sample REST-based Flask server that supports 3 routes:
+This repository contains a sample REST-based Flask server that supports 3 routes:
 * /hello
 * /compute
 * /date
@@ -12,9 +12,10 @@ formatted as follows:
 
 ```/hello?firstname={first name}&lastname={last name}&gender={m/f}```
 
-The ```/compute``` route will return the result of a computation as a string.
-Supported operations include "add", "subtract", "multiply", and "divide".
-The route must be formatted as follows:
+The ```/compute``` route will return the result of a computation of two numbers,
+num1 and num2, as a string.  Supported operations include "add", "subtract",
+"multiply", and "divide".  For example, if num1 is 5, num2 is 2, and operation is
+subtract, the route will return "2.0".  The route must be formatted as follows:
 
 ```/compute?num1={num1}&num2={num2}&operator={add/subtract/multiply/divide}```
 
@@ -26,6 +27,10 @@ This route takes no parameters or arguments.
 Clone the GitHub repo for this example flask server:
 
 ```$git clone https://github.com/rhartung/example-flask-server.git```
+
+cd into the repository:
+
+```cd example-flask-server```
 
 Create and activate a virtual environment:
 
@@ -53,9 +58,7 @@ requirements.
 ## Running the tests
 
 From the command line:
-```
-$python tests.py
-```
+```$python tests.py```
 
 ## Built With
 
