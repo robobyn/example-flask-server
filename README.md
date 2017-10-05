@@ -14,13 +14,19 @@ formatted as follows:
 
 The ```/compute``` route will return the result of a computation of two numbers,
 num1 and num2, as a string.  Supported operations include "add", "subtract",
-"multiply", and "divide".  For example, if num1 is 5, num2 is 2, and operation is
+"multiply", and "divide".  For example, if num1 is 5, num2 is 3, and operation is
 subtract, the route will return "2.0".  The route must be formatted as follows:
 
-```/compute?num1={num1}&num2={num2}&operator={add/subtract/multiply/divide}```
+```/compute?num1={num1}&num2={num2}&operation={add/subtract/multiply/divide}```
 
 The ```/date``` route will return the current local date in the form yyyy-mm-dd.
 This route takes no parameters or arguments.
+
+## Prerequisites
+
+Program written in Python 2.7 using Flask framework version 0.12.2.  Tested on OSX and
+Red Hat distribution of Linux.  Please see requirements.txt for a full list of
+requirements.
 
 ## Getting Started
 
@@ -32,7 +38,7 @@ cd into the repository:
 
 ```cd example-flask-server```
 
-Create and activate a virtual environment:
+Optional: Create and activate a virtual environment:
 
 ```
 $virtualenv env
@@ -49,11 +55,6 @@ Start the server
 ```$python server.py```
 
 Run in browser using localhost:5000/{desired route}
-
-## Prerequisites
-
-Program written in Python 2.7.  Please see requirements.txt for a full list of
-requirements.
 
 ## Running the tests
 
